@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="PCPartsStore.WPF.Components.SearchFieldControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:lex="http://wpflocalizeextension.codeplex.com"
+             mc:Ignorable="d"
+             lex:LocalizeDictionary.DesignCulture="en"
+             lex:ResxLocalizationProvider.DefaultAssembly="PCPartsStore.WPF"
+             lex:ResxLocalizationProvider.DefaultDictionary="Translation"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </UserControl.Resources>
+    <StackPanel Orientation="Horizontal">
+        <TextBox Margin="10" MinWidth="200" Text="{Binding SearchText}"/>
+        <Button Visibility="{Binding HasNotSearched, Converter={StaticResource BooleanToVisibilityConverter}}" Margin="10" x:Name="SearchFieldButton" Content="{lex:Loc}" Command="{Binding SearchCommand}"/>
+        <Button Visibility="{Binding HasSearched, Converter={StaticResource BooleanToVisibilityConverter}}" Margin="10" x:Name="SearchQuitButton" Content="{lex:Loc}" Command="{Binding QuitSearchCommand}"/>
+    </StackPanel>
+</UserControl>

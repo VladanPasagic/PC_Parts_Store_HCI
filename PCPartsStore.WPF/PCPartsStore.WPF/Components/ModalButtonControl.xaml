@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="PCPartsStore.WPF.Components.ModalButtonControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:lex="http://wpflocalizeextension.codeplex.com"
+             lex:LocalizeDictionary.DesignCulture="en"
+             lex:ResxLocalizationProvider.DefaultAssembly="PCPartsStore.WPF"
+             lex:ResxLocalizationProvider.DefaultDictionary="Translation"
+             xmlns:local="clr-namespace:PCPartsStore.WPF.Components"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </UserControl.Resources>
+    <StackPanel Grid.Row="1" Orientation="Horizontal">
+        <Button Visibility="{Binding IsAddable, Converter={StaticResource BooleanToVisibilityConverter}}" x:Name="AddButton" Margin="10" Command="{Binding AddCommand}" Content="{lex:Loc}"/>
+        <Button Visibility="{Binding IsEditable, Converter={StaticResource BooleanToVisibilityConverter}}" x:Name="EditButton" Margin="10" Command="{Binding EditCommand}" Content="{lex:Loc}"/>
+        <Button x:Name="CancelButton" Margin="10" Command="{Binding CloseModalCommand}" Content="{lex:Loc}"/>
+    </StackPanel>
+</UserControl>

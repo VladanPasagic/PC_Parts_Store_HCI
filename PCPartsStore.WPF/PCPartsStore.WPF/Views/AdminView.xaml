@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="PCPartsStore.WPF.Views.AdminView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:views="clr-namespace:PCPartsStore.WPF.Views"
+             xmlns:viewmodels ="clr-namespace:PCPartsStore.WPF.ViewModels"
+             xmlns:lex="http://wpflocalizeextension.codeplex.com"
+             lex:LocalizeDictionary.DesignCulture="en"
+             lex:ResxLocalizationProvider.DefaultAssembly="PCPartsStore.WPF"
+             lex:ResxLocalizationProvider.DefaultDictionary="Translation"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem x:Name="ProductMenuItem" Header="{lex:Loc}" Command="{Binding ProductMenuItemCommand}"/>
+            <MenuItem x:Name="SellerMenuItem" Header="{lex:Loc}" Command="{Binding SellerMenuItemCommand}"/>
+            <MenuItem x:Name="CategoryMenuItem" Header="{lex:Loc}" Command="{Binding CategoryMenuItemCommand}"/>
+            <MenuItem x:Name="ManufacturerMenuItem" Header="{lex:Loc}" Command="{Binding ManufacturerMenuItemCommand}"/>
+            <MenuItem x:Name="ReceiptMenuItem" Header="{lex:Loc}" Command="{Binding ReceiptMenuItemCommand}"/>
+            <MenuItem x:Name="LanguagesMenuItem" Header="{lex:Loc}">
+                <MenuItem x:Name="SerbianLanguageMenuItem" Header="{lex:Loc}" Command="{Binding ChangeLanguageSerbianCommand}"
+                          IsCheckable="True" IsChecked="{Binding SerbianLanguageChecked}"/>
+                <MenuItem x:Name="EnglishLanguageMenuItem" Header="{lex:Loc}" Command="{Binding ChangeLanguageEnglishCommand}"
+                          IsCheckable="True" IsChecked="{Binding EnglishLanguageChecked}"/>
+            </MenuItem>
+            <MenuItem x:Name="ThemeMenuItem" Header="{lex:Loc}">
+                <MenuItem x:Name="LightThemeMenuItem" Header="{lex:Loc}" Command="{Binding ChangeLightThemeCommand}"
+                          IsCheckable="True" IsChecked="{Binding LightThemeChecked}"/>
+                <MenuItem x:Name="DarkThemeMenuItem" Header="{lex:Loc}" Command="{Binding ChangeDarkThemeCommand}"
+                          IsCheckable="True" IsChecked="{Binding DarkThemeChecked}"/>
+                <MenuItem x:Name="GreyThemeMenuItem" Header="{lex:Loc}" Command="{Binding ChangeGreyThemeCommand}"
+          IsCheckable="True" IsChecked="{Binding GreyThemeChecked}"/>
+            </MenuItem>
+            <MenuItem x:Name="LogoutMenuItem" Header="{lex:Loc}" Command="{Binding LogoutMenuItemCommand}"/>
+        </Menu>
+        <ContentControl DockPanel.Dock="Bottom" Content="{Binding CurrentViewModel}">
+            <ContentControl.Resources>
+                <DataTemplate DataType="{x:Type viewmodels:CategoriesViewModel}">
+                    <views:CategoriesView/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewmodels:ManufacturersViewModel}">
+                    <views:ManufacturersView/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewmodels:SellersViewModel}">
+                    <views:SellersView/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewmodels:ProductsViewModel}">
+                    <views:ProductsView/>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type viewmodels:ReceiptsViewModel}">
+                    <views:ReceiptsView/>
+                </DataTemplate>
+            </ContentControl.Resources>
+        </ContentControl>
+    </DockPanel>
+</UserControl>

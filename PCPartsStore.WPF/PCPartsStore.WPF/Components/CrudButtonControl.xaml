@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="PCPartsStore.WPF.Components.CrudButtonControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:lex="http://wpflocalizeextension.codeplex.com"
+             mc:Ignorable="d"
+             lex:LocalizeDictionary.DesignCulture="en"
+             lex:ResxLocalizationProvider.DefaultAssembly="PCPartsStore.WPF"
+             lex:ResxLocalizationProvider.DefaultDictionary="Translation"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel Orientation="Horizontal">
+        <Button x:Name="CreateButton" Width="200" Margin="10" Content="{lex:Loc}" Command="{Binding Create}"/>
+        <Button x:Name="DeleteButton" Width="200" Margin="10" Content="{lex:Loc}" Command="{Binding Delete}"/>
+        <Button x:Name="UpdateButton" Width="200" Margin="10" Content="{lex:Loc}" Command="{Binding Update}"/>
+    </StackPanel>
+</UserControl>

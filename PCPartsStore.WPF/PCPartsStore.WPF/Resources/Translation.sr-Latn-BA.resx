@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddButton" xml:space="preserve">
+    <value>Dodaj</value>
+  </data>
+  <data name="AddItemsButton" xml:space="preserve">
+    <value>Dodaj</value>
+  </data>
+  <data name="AddSingleItemButton" xml:space="preserve">
+    <value>Dodaj jedan</value>
+  </data>
+  <data name="CancelButton" xml:space="preserve">
+    <value>Otkaži</value>
+  </data>
+  <data name="CannotAddZeroArtcilesError" xml:space="preserve">
+    <value>Ne može se dodati nula artikala</value>
+  </data>
+  <data name="CategoryFormNameLabel" xml:space="preserve">
+    <value>Naziv kategorije*</value>
+  </data>
+  <data name="CategoryMenuItem" xml:space="preserve">
+    <value>_Kategorije</value>
+  </data>
+  <data name="CategoryNotSelected" xml:space="preserve">
+    <value>Kategorija nije odabrana</value>
+  </data>
+  <data name="CategoryNotSelectedMessage" xml:space="preserve">
+    <value>Morate izabrati kategoriju</value>
+  </data>
+  <data name="CategoryViewNameHeader" xml:space="preserve">
+    <value>Ime</value>
+  </data>
+  <data name="CategoryViewTextBlock" xml:space="preserve">
+    <value>Pregled kategorija</value>
+  </data>
+  <data name="CreateButton" xml:space="preserve">
+    <value>Dodaj</value>
+  </data>
+  <data name="DarkThemeMenuItem" xml:space="preserve">
+    <value>_Tamna</value>
+  </data>
+  <data name="DeactivateAccountErrorMessage" xml:space="preserve">
+    <value>Morate odabrati nalog da bi ga deaktivirali.</value>
+  </data>
+  <data name="DeactivateButton" xml:space="preserve">
+    <value>Deaktiviraj</value>
+  </data>
+  <data name="DeleteButton" xml:space="preserve">
+    <value>Briši</value>
+  </data>
+  <data name="EditButton" xml:space="preserve">
+    <value>Ažuriraj</value>
+  </data>
+  <data name="EnglishLanguageMenuItem" xml:space="preserve">
+    <value>_Engleski</value>
+  </data>
+  <data name="FieldEmpty" xml:space="preserve">
+    <value>Polje je prazno</value>
+  </data>
+  <data name="GoToRegisterButton" xml:space="preserve">
+    <value>Registruj se</value>
+  </data>
+  <data name="GreyThemeMenuItem" xml:space="preserve">
+    <value>Siva</value>
+  </data>
+  <data name="InactiveAccount" xml:space="preserve">
+    <value>Nalog nije aktivan, kontaktirajte administratora za pomoć</value>
+  </data>
+  <data name="InvalidUsernamePasswordCombo" xml:space="preserve">
+    <value>Korisničko ime ili šifra nisu validni</value>
+  </data>
+  <data name="ItemNotSelected" xml:space="preserve">
+    <value>Stavka nije odabrana</value>
+  </data>
+  <data name="ItemViewNameHeader" xml:space="preserve">
+    <value>Naziv</value>
+  </data>
+  <data name="ItemViewPriceHeader" xml:space="preserve">
+    <value>Cijena</value>
+  </data>
+  <data name="ItemViewQuantityHeader" xml:space="preserve">
+    <value>Količina</value>
+  </data>
+  <data name="LanguagesMenuItem" xml:space="preserve">
+    <value>_Jezici</value>
+  </data>
+  <data name="LightThemeMenuItem" xml:space="preserve">
+    <value>_Svijetla</value>
+  </data>
+  <data name="LoginButton" xml:space="preserve">
+    <value>Prijavi se</value>
+  </data>
+  <data name="LogoutMenuItem" xml:space="preserve">
+    <value>_Izloguj se</value>
+  </data>
+  <data name="ManufacturerFormCountryLabel" xml:space="preserve">
+    <value>Država proizvođača</value>
+  </data>
+  <data name="ManufacturerFormNameLabel" xml:space="preserve">
+    <value>Naziv proizvođača</value>
+  </data>
+  <data name="ManufacturerMenuItem" xml:space="preserve">
+    <value>_Proizvođače</value>
+  </data>
+  <data name="ManufacturerNotSelected" xml:space="preserve">
+    <value>Proizvođač nije odabran</value>
+  </data>
+  <data name="ManufacturerNotSelectedMessage" xml:space="preserve">
+    <value>Morate izabrati proizvođača</value>
+  </data>
+  <data name="ManufacturerViewCountryHeader" xml:space="preserve">
+    <value>Država</value>
+  </data>
+  <data name="ManufacturerViewNameHeader" xml:space="preserve">
+    <value>Naziv</value>
+  </data>
+  <data name="ManufacturerViewTextBlock" xml:space="preserve">
+    <value>Pregled proizvođača</value>
+  </data>
+  <data name="NoMoreArticlesLeftError" xml:space="preserve">
+    <value>Nema vise artikala na stanju</value>
+  </data>
+  <data name="NoReceiptErrorMessage" xml:space="preserve">
+    <value>Morate odabrati račun</value>
+  </data>
+  <data name="PasswordEmptyErrorMessage" xml:space="preserve">
+    <value>Polje za lozinku ne smije biti prazno</value>
+  </data>
+  <data name="PasswordTextBlock" xml:space="preserve">
+    <value>Lozinka*</value>
+  </data>
+  <data name="ProductMenuItem" xml:space="preserve">
+    <value>_Proizvodi</value>
+  </data>
+  <data name="ProductNotSelectedMessage" xml:space="preserve">
+    <value>Morate izabrati proizvod</value>
+  </data>
+  <data name="ProductViewCategoryHeader" xml:space="preserve">
+    <value>Kategorija</value>
+  </data>
+  <data name="ProductViewManufacturerHeader" xml:space="preserve">
+    <value>Proizvođač</value>
+  </data>
+  <data name="ProductViewManufacturingYearHeader" xml:space="preserve">
+    <value>Godina proizvodnje</value>
+  </data>
+  <data name="ProductViewNameHeader" xml:space="preserve">
+    <value>Naziv</value>
+  </data>
+  <data name="ProductViewPriceHeader" xml:space="preserve">
+    <value>Cijena</value>
+  </data>
+  <data name="ProductViewQuantityHeader" xml:space="preserve">
+    <value>Količina</value>
+  </data>
+  <data name="ProductViewTextBlock" xml:space="preserve">
+    <value>Pregled proizvoda</value>
+  </data>
+  <data name="QuantityExceededError" xml:space="preserve">
+    <value>Nema toliko artikala na stanju</value>
+  </data>
+  <data name="ReceiptEmpty" xml:space="preserve">
+    <value>Račun je prazan</value>
+  </data>
+  <data name="ReceiptIdHeader" xml:space="preserve">
+    <value>Id računa</value>
+  </data>
+  <data name="ReceiptMenuItem" xml:space="preserve">
+    <value>_Računi</value>
+  </data>
+  <data name="ReceiptNotSelected" xml:space="preserve">
+    <value>Morate izabrati račun</value>
+  </data>
+  <data name="ReceiptsViewTextBlock" xml:space="preserve">
+    <value>Pregled računa</value>
+  </data>
+  <data name="RemoveButton" xml:space="preserve">
+    <value>Ukloni</value>
+  </data>
+  <data name="RequiredFieldsMissing" xml:space="preserve">
+    <value>Neka obavezna polja su prazna</value>
+  </data>
+  <data name="SaveButton" xml:space="preserve">
+    <value>Sačuvaj</value>
+  </data>
+  <data name="SearchFieldButton" xml:space="preserve">
+    <value>Pretraži</value>
+  </data>
+  <data name="SearchQuitButton" xml:space="preserve">
+    <value>Prekini pretragu</value>
+  </data>
+  <data name="SelectArticleFirstError" xml:space="preserve">
+    <value>Trebate prvo izabrati artikal da bi ga dodali</value>
+  </data>
+  <data name="SellerMenuItem" xml:space="preserve">
+    <value>_Prodavce</value>
+  </data>
+  <data name="SellerNameHeader" xml:space="preserve">
+    <value>Ime prodavca</value>
+  </data>
+  <data name="SellerViewIsActiveHeader" xml:space="preserve">
+    <value>Nalog aktivan</value>
+  </data>
+  <data name="SellerViewTextBlock" xml:space="preserve">
+    <value>Pregled prodavaca</value>
+  </data>
+  <data name="SellerViewUsernameHeader" xml:space="preserve">
+    <value>Korisničko ime</value>
+  </data>
+  <data name="SerbianLanguageMenuItem" xml:space="preserve">
+    <value>_Srpski</value>
+  </data>
+  <data name="SettingsMenuItem" xml:space="preserve">
+    <value>_Podešavanja</value>
+  </data>
+  <data name="StartingWindow" xml:space="preserve">
+    <value>Prodavnica Računarske Opreme</value>
+  </data>
+  <data name="ThemeMenuItem" xml:space="preserve">
+    <value>_Teme</value>
+  </data>
+  <data name="TotalPriceHeader" xml:space="preserve">
+    <value>Ukupna cijena</value>
+  </data>
+  <data name="TotalTextBlock" xml:space="preserve">
+    <value>Ukupno</value>
+  </data>
+  <data name="UpdateButton" xml:space="preserve">
+    <value>Ažuriraj</value>
+  </data>
+  <data name="UsernameEmptyErrorMessage" xml:space="preserve">
+    <value>Polje za korisničko ime ne smije biti prazno</value>
+  </data>
+  <data name="UsernameTextBlock" xml:space="preserve">
+    <value>Korisničko ime*</value>
+  </data>
+  <data name="ViewButton" xml:space="preserve">
+    <value>Pregledaj</value>
+  </data>
+  <data name="ViewMenuItem" xml:space="preserve">
+    <value>_Pregledaj</value>
+  </data>
+</root>

@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="PCPartsStore.WPF.Views.CategoriesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:lex="http://wpflocalizeextension.codeplex.com"
+             xmlns:components="clr-namespace:PCPartsStore.WPF.Components"
+             lex:LocalizeDictionary.DesignCulture="en"
+             lex:ResxLocalizationProvider.DefaultAssembly="PCPartsStore.WPF"
+             lex:ResxLocalizationProvider.DefaultDictionary="Translation"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        <materialDesign:DialogHost IsOpen="{Binding IsOpen}">
+            <materialDesign:DialogHost.DialogContent>
+                <components:CategoryDetailsForm DataContext="{Binding CategoryDetailsFormViewModel}"/>
+            </materialDesign:DialogHost.DialogContent>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <components:SearchFieldControl Grid.Column="0" DataContext="{Binding SearchFieldControl}"/>
+                    <TextBlock Grid.Column="1" Margin="10" Height="20" FontSize="14" 
+               Visibility="{Binding HasErrorMessage, Converter={StaticResource BooleanToVisibilityConverter}}" Text="{Binding ErrorMessage}"
+               Style="{StaticResource ErrorMessage}"/>
+                </Grid>
+
+                <Grid Grid.Row="0">
+                    <TextBlock FontSize="30" x:Name="CategoryViewTextBlock" VerticalAlignment="Center" TextAlignment="Center" Text="{lex:Loc}"/>
+                </Grid>
+                <DataGrid Grid.Row="2" ItemsSource="{Binding Categories}" SelectedItem="{Binding SelectedCategory}" ColumnWidth="*">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Name}">
+                            <DataGridTextColumn.Header>
+                                <TextBlock x:Name="CategoryViewNameHeader" Text="{lex:Loc}"/>
+                            </DataGridTextColumn.Header>
+                        </DataGridTextColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <components:CrudButtonControl DataContext="{Binding Crud}" Grid.Row="3" HorizontalAlignment="Center"/>
+            </Grid>
+        </materialDesign:DialogHost>
+    </Grid>
+</UserControl>

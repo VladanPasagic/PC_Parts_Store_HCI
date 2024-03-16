@@ -1,0 +1,31 @@
+﻿<Window x:Class="PCPartsStore.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PCPartsStore.WPF"
+        xmlns:lex="http://wpflocalizeextension.codeplex.com"
+        xmlns:viewmodels="clr-namespace:PCPartsStore.WPF.ViewModels"
+        xmlns:views="clr-namespace:PCPartsStore.WPF.Views"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Style="{StaticResource MaterialDesignWindow}"
+        lex:LocalizeDictionary.DesignCulture="en"
+        lex:ResxLocalizationProvider.DefaultAssembly="PCPartsStore.WPF"
+        lex:ResxLocalizationProvider.DefaultDictionary="Translation"
+        mc:Ignorable="d"
+        x:Name="StartingWindow" Title="{lex:Loc}" Height="450" Width="800"
+        MinWidth="800" MinHeight="450" WindowStartupLocation="CenterScreen">
+    <ContentControl Content="{Binding CurrentViewModel}">
+        <ContentControl.Resources>
+            <DataTemplate DataType="{x:Type viewmodels:LoginViewModel}">
+                <views:LoginView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:AdminViewModel}">
+                <views:AdminView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:SellerViewModel}">
+                <views:SellerView/>
+            </DataTemplate>
+        </ContentControl.Resources>
+    </ContentControl>
+</Window>
